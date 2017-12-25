@@ -31,6 +31,12 @@ See api json output;
 
 See the demo for a limited time at http://207.154.251.255/
 
+Also you can use a more simple cli version of this by;
+
+```
+npm install
+node index-cli.js
+```
 
 ### uses
 
