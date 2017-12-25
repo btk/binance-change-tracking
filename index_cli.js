@@ -41,7 +41,7 @@ function printByChange(){
   });
   let i = 0;
   while(i < 5){
-    console.log((i+1) + ") "+ coins[i].symbol + " => " + coins[i].change.toFixed(4) + "%" + " (" + coins[i].volumes + " BTC Moved)");
+    console.log((i+1) + ") "+ coins[i].symbol + " => " + (coins[i].change * 100).toFixed(2) + "%" + " (" + coins[i].volumes + " BTC Moved)");
     i++;
   }
 }
