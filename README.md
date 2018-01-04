@@ -13,6 +13,7 @@ const binanceRest = new api.BinanceRest({
     disableBeautification: false
 });
 ```
+Though, the read-only data is supplied without a binance api key and secret.
 
 Start installing requirements;
 
