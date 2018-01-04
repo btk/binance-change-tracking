@@ -25,7 +25,7 @@ binanceRest.allPrices((err, data) => {
         });
         let changeInValue = endOfInterval - startOfInterval; // 5 / -5
         let changeInPercentage = changeInValue / startOfInterval; // 10 / -10
-        coins.push({symbol: symbol, change: changeInPercentage, trades, volumes: Math.ceil(volumes * Number(coin.price))});
+        coins.push({symbol: symbol, change: changeInPercentage, trades, volumes: Math.ceil(volumes * Number(coin.price)), price: coin.price});
         if(dataLen == coins.length){
           printByChange();
         }

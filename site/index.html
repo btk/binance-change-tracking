@@ -53,6 +53,13 @@
             </a>
           </td>
           <td>
+            <a href="#" ng-click="sortType = 'price'; sortReverse = !sortReverse">
+            Price (BTC)
+              <span ng-show="sortType == 'price' && !sortReverse" class="fa fa-caret-down"></span>
+              <span ng-show="sortType == 'price' && sortReverse" class="fa fa-caret-up"></span>
+            </a>
+          </td>
+          <td>
             <a href="#" ng-click="sortType = 'volumes'; sortReverse = !sortReverse">
             Volumes ({{ min }}min)
               <span ng-show="sortType == 'volumes' && !sortReverse" class="fa fa-caret-down"></span>
@@ -73,6 +80,7 @@
         <tr ng-repeat="coin in coins | orderBy:sortType:sortReverse | filter:searchCoin">
           <td><a href="https://www.binance.com/trade.html?symbol={{ coin.symbol }}" target="_blank">{{ coin.symbol }}</a></td>
           <td>{{ coin.change }} %</td>
+          <td>{{ coin.price }} BTC</td>
           <td>{{ coin.volumes }} BTC</td>
           <td>{{ coin.trades }} Order</td>
         </tr>

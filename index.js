@@ -46,7 +46,7 @@ app.get('/api', (request, res) => {
           });
           let changeInValue = endOfInterval - startOfInterval; // 5 / -5
           let changeInPercentage = changeInValue / startOfInterval; // 10 / -10
-          coins.push({symbol: symbol, change: (changeInPercentage * 100).toFixed(2), trades, volumes: Math.ceil(volumes * Number(coin.price))});
+          coins.push({symbol: symbol, change: (changeInPercentage * 100).toFixed(2), trades, volumes: Math.ceil(volumes * Number(coin.price)), price: coin.price});
           if(dataLen == coins.length){
             printByChange();
           }
